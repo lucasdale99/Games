@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MineSweeper</title>
+    </head>
+    <body style="padding: 0px; margin: 0px; overflow: hidden; box-sizing: border-box;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+            <h2>MineSweeper</h2>
+            
+            <div id="main" style="background-color: black; padding: 8">
+                <div style="flex-direction: row; display: flex; justify-content: space-between; background-color: white; padding: 8px;">
+                    <h4 id="bombCount" style="flex: 1"></h4>
+                    <input id="restartButton" type="button" onclick="start()" value="😐" style="font-size: 18pt; width: 45%" />
+                    <h4 id="timer" style="flex: 1; text-align: right;">0</h4>
+                </div>
+                <div style="flex-direction: row; display: flex; justify-content: space-between; background-color: white;">
+                    <input type="button" onclick="start('easy')" value="Easy" />
+                    <input type="button" onclick="start('medium')" value="Medium" />
+                    <input type="button" onclick="start('hard')" value="Hard" />
+                </div>
+                <div id="board">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>
